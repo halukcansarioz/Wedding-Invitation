@@ -11,6 +11,7 @@
 
 This project is an **interactive digital wedding invitation web application** built with React, Vite, TypeScript, and Supabase. Deployed live at [`wedding-invitation-halook.vercel.app`](https://wedding-invitation-halook.vercel.app), it combines a mobile-first **Progressive Web App (PWA)** frontend with real-time RSVP management, Supabase Edge Functions, automated unit/E2E testing, and production-ready Vercel security headers.
 
+
 ---
 
 ## 📚 Table of Contents
