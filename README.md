@@ -1,6 +1,7 @@
 # 💍 Wedding Invitation
 ### (Interactive Digital Wedding Invitation Web Application Built with React, Vite & Supabase)
 
+[![CI](https://github.com/halukcansarioz/Wedding-Invitation/actions/workflows/ci.yml/badge.svg)](https://github.com/halukcansarioz/Wedding-Invitation/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](#)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](#)
@@ -36,6 +37,18 @@ Sharing wedding details, collecting guest RSVPs, and managing event updates acro
 - **Live Demo:** [wedding-invitation-halook.vercel.app](https://wedding-invitation-halook.vercel.app)
 
 ---
+---
+
+## Architecture
+```mermaid
+flowchart LR
+    Guest["Guest Browser / Mobile PWA"] -->|HTTPS| Vercel["Vercel Hosting"]
+    Vercel -->|Serves| ReactApp["React + Vite + TypeScript"]
+    ReactApp -->|Offline Assets| SW["Service Worker / PWA Cache"]
+    ReactApp -->|RSVP Data| Supabase["Supabase PostgreSQL & Edge Functions"]
+    Supabase -->|Notifications| Email["Automated Email Service"]
+```
+
 
 ## Features
 - **Mobile-First PWA Experience** — Responsive invitation design with Progressive Web App support and runtime image caching (`dev-dist` / `vite.config.js`) so heavy images are never precached unnecessarily.
