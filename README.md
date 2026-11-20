@@ -64,12 +64,12 @@ Sharing wedding details, collecting guest RSVPs, and managing event updates acro
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/halukcansarioz/wedding-invitation.git
+git clone https://github.com/halukcansarioz/Wedding-Invitation.git
 ```
 
 #### 2. Navigate to the Project Directory
 ```bash
-cd wedding-invitation
+cd Wedding-Invitation
 ```
 
 #### 3. Install Dependencies
