@@ -16,7 +16,7 @@ export const DEFAULT_SITE_DATA = {
   invitation: {
     bride: "Handenur",
     groom: "Haluk Can",
-    dateText: "07 Ağustos 2027",
+    dateText: "07 Temmuz 2027",
     timeText: "19:00",
     weddingDate: "2027-07-07T19:00:00",
     rsvpDeadline: "2027-07-01",
