@@ -52,16 +52,6 @@ function App() {
     window.matchMedia("(prefers-color-scheme: dark)").matches;
   const resolvedTheme = isLiveProjector || prefersDark ? "dark" : activeTheme;
 
-  useEffect(() => {
-    if (typeof navigator !== "undefined" && !localStorage.getItem("i18nextLng")) {
-      const userLang = navigator.language || navigator.userLanguage;
-      if (userLang.startsWith("tr")) {
-        i18n.changeLanguage("tr");
-      } else {
-        i18n.changeLanguage("en");
-      }
-    }
-  }, [i18n]);
 
   useEffect(() => {
     document.documentElement.lang = isEn ? "en" : "tr";
