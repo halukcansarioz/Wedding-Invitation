@@ -1,0 +1,186 @@
+/* Modern, Luxury & Clean Visual Polish
+   Preserves .intro-card and .intro-page dimensions/visuals for Playwright tests */
+
+.invitation-page {
+  color: var(--text, var(--text-main, #55303b));
+  font-family: "Montserrat", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.invitation-page button,
+.invitation-page label,
+.invitation-page input,
+.invitation-page textarea,
+.invitation-page select,
+.invitation-page p {
+  font-family: "Montserrat", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.invitation-page h1,
+.invitation-page h2,
+.invitation-page h3,
+.invitation-page .section-title,
+.invitation-page .card-title,
+.invitation-page .small-title {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  letter-spacing: 0.02em;
+  color: var(--text, var(--text-main, #55303b));
+}
+
+.invitation-page .couple-title {
+  font-family: "Great Vibes", "Alex Brush", cursive;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+/* Multi-layered shadows, semi-transparent borders, glass effect & hover lift */
+.card,
+.ceremony-item,
+.schedule-item,
+.rsvp-card,
+.qr-public-card {
+  background: var(--paper-soft, rgba(255, 247, 249, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 10px 30px -10px rgba(85, 48, 59, 0.12),
+    0 4px 12px -4px rgba(85, 48, 59, 0.06);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.card:hover,
+.ceremony-item:hover,
+.schedule-item:hover,
+.rsvp-card:hover,
+.qr-public-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 18px 40px -12px rgba(85, 48, 59, 0.18),
+    0 8px 20px -6px rgba(85, 48, 59, 0.08);
+}
+
+/* Countdown boxes: tabular-nums & glass surface */
+.count-box,
+.countdown-box,
+.countdown-item {
+  font-variant-numeric: tabular-nums;
+  background: var(--paper-soft, rgba(255, 247, 249, 0.76));
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 8px 24px -8px rgba(85, 48, 59, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.count-box span,
+.countdown-box span,
+.countdown-item span {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Schedule flow: left accent line & modern time badge */
+.schedule-item {
+  border-left: 3px solid var(--rose, #d48c9c);
+}
+
+.schedule-item .schedule-time,
+.schedule-item .time-badge,
+.schedule-item time {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--rose-dark, var(--text, #55303b));
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(212, 140, 156, 0.35);
+  box-shadow: 0 2px 8px rgba(85, 48, 59, 0.06);
+}
+
+/* RSVP form fields & buttons */
+.rsvp-card input,
+.rsvp-card textarea,
+.invitation-page input,
+.invitation-page textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.rsvp-card input:focus-visible,
+.rsvp-card textarea:focus-visible,
+.invitation-page input:focus-visible,
+.invitation-page textarea:focus-visible {
+  outline: 2px solid transparent;
+  border-color: var(--rose, #d48c9c);
+  box-shadow: 0 0 0 4px rgba(212, 140, 156, 0.24);
+}
+
+.option-button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.option-button.active,
+.option-button[aria-pressed="true"],
+.option-button.selected {
+  border-color: var(--rose, #d48c9c);
+  box-shadow:
+    0 8px 20px -6px rgba(85, 48, 59, 0.22),
+    0 0 0 1px var(--rose, #d48c9c);
+}
+
+.rsvp-card button[type="submit"],
+.submit-btn,
+.btn-primary {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.rsvp-card button[type="submit"]:hover:not(:disabled),
+.submit-btn:hover:not(:disabled),
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -6px rgba(85, 48, 59, 0.28);
+}
+
+/* Floating control bar / glass dock */
+.floating-actions,
+.glass-dock {
+  background: var(--paper-soft, rgba(255, 250, 251, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  box-shadow:
+    0 12px 32px -8px rgba(85, 48, 59, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .ceremony-item,
+  .schedule-item,
+  .rsvp-card,
+  .qr-public-card,
+  .option-button,
+  .rsvp-card button[type="submit"],
+  .submit-btn,
+  .btn-primary {
+    transition: none;
+  }
+
+  .card:hover,
+  .ceremony-item:hover,
+  .schedule-item:hover,
+  .rsvp-card:hover,
+  .qr-public-card:hover,
+  .rsvp-card button[type="submit"]:hover:not(:disabled),
+  .submit-btn:hover:not(:disabled),
+  .btn-primary:hover:not(:disabled) {
+    transform: none;
+  }
+}
