@@ -10,6 +10,7 @@ export const THEME_FAVICON_COLORS = {
   lavanta: { bg: "#f9f7fc", circle: "#e6dcf2", petal: "#9b7cbf", stroke: "#664b8a", center: "#fff1b8" },
   minimal: { bg: "#ffffff", circle: "#f0f0f0", petal: "#b3b3b3", stroke: "#737373", center: "#ffffff" },
   dark: { bg: "#2a2a2a", circle: "#404040", petal: "#8c8c8c", stroke: "#bfbfbf", center: "#404040" },
+modern: { bg: "#f7f6f2", circle: "#d6c3ad", petal: "#9a7450", stroke: "#785738", center: "#ffffff" }, 
 };
 
 export const DEFAULT_SITE_DATA = {
@@ -124,8 +125,8 @@ export const DEFAULT_SITE_DATA = {
     { time: "21:00", title: "Eğlence", description: "Müzik ve eğlence ile geceye devam." },
   ],
   settings: {
-    theme: "lavanta",
-    defaultTheme: "lavanta",
+    theme: "modern",
+    defaultTheme: "modern",
     requireWishApproval: true,
     isPostWedding: false,
     visibility: {
@@ -166,6 +167,7 @@ export const THEMES = [
   { label: "Lavanta", value: "lavanta" },
   { label: "Minimal Beyaz", value: "minimal" },
   { label: "Koyu Tema", value: "dark" },
+{ label: "Modern Editoryal", value: "modern" },
 ];
 
 export const THEME_DEFAULT_IMAGES = {
