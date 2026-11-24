@@ -270,4 +270,17 @@ box-shadow: 0 6px 20px rgba(61, 36, 42, 0.08) !important;
 color: #3d242a;
 border-color: rgba(184, 138, 125, 0.24);
 }
-
+/* === Global GPU Acceleration & Modern Luxury Envelope === */
+*, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+.petal-layer span { box-shadow: none !important; }
+[class*="butterfly"], .butterfly, .floating-bounce, .float-anim { filter: none !important; animation: none !important; }
+.intro-page { background: radial-gradient(circle at 50% 25%, #fffdf9 0%, #f8f1ea 55%, #efe3d8 100%) !important; }
+.envelope-container { box-shadow: 0 20px 44px rgba(61, 36, 42, 0.1); }
+.intro-card { outline: 1px solid color-mix(in srgb, var(--rose) 28%, transparent); outline-offset: -12px; padding: clamp(28px, 5vw, 48px) clamp(22px, 4vw, 40px); background: linear-gradient(180deg, #fffdf9 0%, #fbf6f0 100%); box-shadow: 0 18px 42px rgba(61, 36, 42, 0.08); }
+.intro-small { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; color: color-mix(in srgb, var(--rose) 85%, #3d242a); margin-bottom: 12px; }
+.couple-title { font-size: clamp(1.9rem, 4.4vw, 2.85rem); line-height: 1.16; letter-spacing: 0.02em; font-weight: 500; color: #361d23; margin: 0 0 14px; }
+.envelope-front { filter: none !important; background: linear-gradient(165deg, #fbf6f0 0%, #f3e9de 55%, #eadccf 100%); border: 1px solid rgba(184, 138, 125, 0.28); box-shadow: 0 10px 24px rgba(61, 36, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
+.envelope-flap { filter: none !important; background: linear-gradient(180deg, #fdf9f4 0%, #f1e5d8 100%); border-top: 1px solid rgba(255, 255, 255, 0.75); box-shadow: 0 6px 16px rgba(61, 36, 42, 0.07); }
+.envelope-seal { background: radial-gradient(circle at 32% 30%, #d4a698 0%, #b88a7d 45%, #8f6054 100%); border: 2px solid rgba(255, 250, 245, 0.75); outline: 2px solid rgba(143, 96, 84, 0.45); outline-offset: 3px; color: #fffaf7; font-weight: 600; letter-spacing: 0.08em; text-shadow: 0 1px 2px rgba(61, 36, 42, 0.35); box-shadow: 0 6px 16px rgba(61, 36, 42, 0.18), inset 0 1px 2px rgba(255, 255, 255, 0.45); transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.24s ease; }
+.envelope-seal:hover { transform: scale(1.05); box-shadow: 0 10px 22px rgba(61, 36, 42, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.55); }
+.envelope-guest-badge { background: rgba(255, 253, 249, 0.92); border: 1px solid rgba(184, 138, 125, 0.38); border-radius: 999px; padding: 6px 16px; letter-spacing: 0.06em; color: #4a2931; box-shadow: 0 3px 10px rgba(61, 36, 42, 0.06); }
