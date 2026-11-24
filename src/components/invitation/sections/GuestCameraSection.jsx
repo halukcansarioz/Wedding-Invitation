@@ -134,7 +134,7 @@ export const GuestCameraSection = memo(function GuestCameraSection() {
           className="main-button"
           onClick={() => fileInputRef.current?.click()}
           disabled={isUploading}
-          style={{ padding: "16px 32px", fontSize: "16px", background: "linear-gradient(135deg, #e67e22, #d35400)", borderColor: "#d35400" }}
+          style={{ padding: "16px 32px", fontSize: "16px", background: "linear-gradient(135deg, var(--rose, #9f4f68), var(--rose-dark, #7a364c))", borderColor: "var(--rose-dark, #7a364c)" }}
         >
           📸 {isUploading ? (isEn ? "Processing..." : "İşleniyor & Yükleniyor...") : (isEn ? "Open Camera" : "Kamera / Galeri Aç")}
         </button>
