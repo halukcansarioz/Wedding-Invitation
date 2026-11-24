@@ -1,7 +1,57 @@
-/* Lightweight 60fps Modern Visual Polish (no backdrop-filter, no heavy shadows) */
+/* 100% Theme-Compatible, 60fps GPU-Safe Modern Luxury Polish */
 
+/* === 1. GPU Safety & Performance === */
+.intro-page,
+.intro-card,
+.envelope-front,
+.envelope-flap,
+.envelope-seal,
+.envelope-guest-badge,
+.invitation-page,
+.invitation-page .card,
+.invitation-page .count-box,
+.invitation-page .schedule-item,
+.invitation-page .ceremony-item,
+.floating-actions,
+.floating-actions a,
+.floating-actions button,
+.admin-quick-access,
+.admin-btn-clean,
+.modal,
+.modal-backdrop,
+.modal-content {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.petal-layer span {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.butterfly,
+[class*="butterfly"],
+.floating-bounce,
+.float-anim {
+  filter: none !important;
+  animation: none !important;
+}
+
+.invitation-page section,
+.invitation-page .section-block,
+.invitation-page .gallery-section,
+.invitation-page .rsvp-section,
+.invitation-page .schedule-section,
+.invitation-page .location-section,
+.invitation-page .wishes-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 420px;
+}
+
+/* === 2. Base Typography & Page Theme Surfaces === */
 .invitation-page {
-  color: var(--text, var(--text-main, #55303b));
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  background: linear-gradient(160deg, var(--theme-page-start), var(--theme-page-end));
   font-family: "Montserrat", "Inter", system-ui, -apple-system, sans-serif;
 }
 
@@ -22,7 +72,7 @@
 .invitation-page .small-title {
   font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   letter-spacing: 0.02em;
-  color: var(--text, var(--text-main, #55303b));
+  color: var(--theme-text-main, var(--text, var(--text-main)));
 }
 
 .invitation-page .couple-title {
@@ -30,257 +80,301 @@
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: 0.01em;
+  color: var(--theme-text-main, var(--text, var(--text-main)));
 }
 
-/* Single-layer light shadow & lightweight transform/border-color transitions */
-.card,
-.ceremony-item,
-.schedule-item,
-.rsvp-card,
-.qr-public-card {
-  background: var(--paper-soft, rgba(255, 249, 250, 0.96));
-  border: 1px solid rgba(212, 165, 165, 0.35);
-  box-shadow: 0 8px 20px rgba(85, 48, 59, 0.08);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+.invitation-page .eyebrow,
+.invitation-page .muted,
+.invitation-page .helper-text,
+.invitation-page .count-box span,
+.invitation-page .ceremony-sub {
+  color: var(--theme-text-muted, var(--text-soft));
 }
 
-.card:hover,
-.ceremony-item:hover,
-.rsvp-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(184, 138, 125, 0.55);
+/* === 3. Modern Luxury Envelope Intro === */
+.intro-page {
+  background: linear-gradient(155deg, var(--theme-page-start), var(--theme-page-end));
+  color: var(--theme-text-main, var(--text, var(--text-main)));
 }
 
-/* Top accent line */
-.card,
-.rsvp-card {
+.intro-card {
   position: relative;
-  overflow: hidden;
+  background: linear-gradient(
+    165deg,
+    var(--theme-surface, var(--paper-soft)),
+    var(--theme-surface-soft, var(--paper))
+  );
+  border: 1px solid rgba(var(--theme-rgb), 0.28);
+  box-shadow: 0 20px 50px rgba(var(--theme-strong-rgb), 0.16);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
 }
 
-.card::before,
-.rsvp-card::before {
+.intro-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(184, 138, 125, 0.2), rgba(184, 138, 125, 0.8), rgba(184, 138, 125, 0.2));
+  inset: 12px;
+  border: 1px solid rgba(var(--theme-rgb), 0.24);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
-/* Countdown with tabular-nums, no backdrop-filter */
-.count-box {
-  background: rgba(255, 251, 252, 0.95);
-  border: 1px solid rgba(212, 165, 165, 0.38);
-  box-shadow: 0 6px 16px rgba(85, 48, 59, 0.07);
-  font-variant-numeric: tabular-nums;
-  transition: transform 0.22s ease, border-color 0.22s ease;
+.intro-small {
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--theme-text-muted, var(--text-soft));
 }
 
-.count-box .count-num,
-.countdown-value {
-  font-variant-numeric: tabular-nums;
+.envelope-front {
+  background: linear-gradient(
+    170deg,
+    var(--theme-surface, var(--paper-soft)),
+    var(--theme-surface-soft, var(--paper))
+  );
+  border: 1px solid rgba(var(--theme-rgb), 0.3);
+  box-shadow: 0 18px 42px rgba(var(--theme-strong-rgb), 0.18);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
 }
 
-.hero-date,
-.hero-time {
-  background: rgba(255, 250, 251, 0.94);
-  border: 1px solid rgba(212, 165, 165, 0.38);
-  box-shadow: 0 4px 12px rgba(85, 48, 59, 0.06);
-  transition: transform 0.22s ease, border-color 0.22s ease;
+.envelope-flap {
+  background: linear-gradient(
+    175deg,
+    var(--theme-surface-soft, var(--paper)),
+    var(--theme-surface, var(--paper-soft))
+  );
+  border-bottom: 1px solid rgba(var(--theme-rgb), 0.26);
 }
 
-/* Schedule left accent line & time badges */
-.schedule-item {
-  border-left: 3px solid rgba(184, 138, 125, 0.78);
-  transition: transform 0.22s ease, border-color 0.22s ease;
+.envelope-guest-badge {
+  background: var(--theme-surface-soft, var(--paper));
+  border: 1px solid rgba(var(--theme-rgb), 0.3);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  box-shadow: 0 6px 18px rgba(var(--theme-strong-rgb), 0.1);
 }
 
-.schedule-item:hover {
-  transform: translateX(3px);
-  border-color: rgba(184, 138, 125, 0.9);
+.envelope-seal {
+  position: relative;
+  background: radial-gradient(
+    circle at 32% 30%,
+    var(--rose),
+    var(--rose-dark) 62%,
+    var(--rose-deep)
+  );
+  color: var(--theme-on-accent, #ffffff);
+  border: 2px solid rgba(var(--theme-soft-rgb), 0.65);
+  box-shadow:
+    0 0 0 4px rgba(var(--theme-rgb), 0.24),
+    0 10px 24px rgba(var(--theme-strong-rgb), 0.28);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.28s ease;
+  will-change: transform;
 }
 
-.schedule-time,
-.time-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(184, 138, 125, 0.14);
-  color: var(--text, #55303b);
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
+.envelope-seal::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(var(--theme-rgb), 0.45);
+  pointer-events: none;
+  animation: sealRingPulse 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  will-change: transform, opacity;
 }
 
-/* 14px rounded RSVP inputs & clean focus ring */
-.rsvp-card input,
-.rsvp-card select,
-.rsvp-card textarea,
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form textarea {
-  border-radius: 14px;
-  border: 1px solid rgba(184, 138, 125, 0.38);
-  background: #ffffff;
-  transition: border-color 0.2s ease;
+.envelope-seal:hover {
+  transform: scale(1.04);
 }
 
-.rsvp-card input:focus,
-.rsvp-card select:focus,
-.rsvp-card textarea:focus,
-.rsvp-form input:focus,
-.rsvp-form select:focus,
-.rsvp-form textarea:focus {
-  outline: none;
-  border-color: rgba(184, 138, 125, 0.9);
-  box-shadow: 0 0 0 3px rgba(184, 138, 125, 0.2);
+.envelope-seal:active {
+  transform: scale(0.97);
 }
 
-/* Floating actions & dock without backdrop-filter or saturate */
-.floating-actions,
-.glass-dock {
-  background: rgba(255, 250, 251, 0.96);
-  border: 1px solid rgba(212, 165, 165, 0.4);
-  box-shadow: 0 6px 18px rgba(85, 48, 59, 0.1);
-  transition: transform 0.22s ease, border-color 0.22s ease;
+/* === 4. Keyframes (GPU-Only: transform & opacity) === */
+@keyframes sealRingPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.72;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
 }
 
-.floating-actions button,
-.glass-dock button {
-  transition: transform 0.2s ease, border-color 0.2s ease;
+@keyframes modernReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* === Performance Killers Cleanup === */
-.hero-date,
-.floating-actions a,
-.floating-actions button,
-.admin-quick-access {
-backdrop-filter: none !important;
--webkit-backdrop-filter: none !important;
+/* === 5. Cards, Countdown, Schedule & Ceremony === */
+.invitation-page .card {
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    var(--theme-surface, var(--paper-soft)),
+    var(--theme-surface-soft, var(--paper))
+  );
+  border: 1px solid rgba(var(--theme-rgb), 0.24);
+  box-shadow: 0 12px 32px rgba(var(--theme-strong-rgb), 0.08);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  animation: modernReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease;
+  will-change: transform;
 }
 
-@keyframes wheelScrollTransform {
-0%, 100% { transform: translateY(0); opacity: 0.9; }
-50% { transform: translateY(6px); opacity: 0.45; }
-}
-
-.scroll-indicator .wheel {
-animation: wheelScrollTransform 2s ease-in-out infinite !important;
-will-change: transform, opacity;
-}
-
-.music-on {
-animation: none !important;
-box-shadow: 0 2px 10px rgba(184, 138, 125, 0.28) !important;
-}
-
-.invitation-page > section:not(:first-of-type),
-.invitation-page > footer {
-content-visibility: auto;
-contain-intrinsic-size: 1px 420px;
-}
-
-/* === 2026 Editorial Luxury Invitation Upgrade === */
-.invitation-page {
-color: #3d242a;
-letter-spacing: 0.01em;
-line-height: 1.65;
-text-rendering: optimizeLegibility;
-}
-
-.invitation-page h1,
-.invitation-page h2,
-.invitation-page h3,
-.invitation-page .section-title,
-.invitation-page .card-title,
-.invitation-page .small-title {
-color: #361d23;
-letter-spacing: 0.03em;
-line-height: 1.2;
-font-weight: 500;
-}
-
-.invitation-page .card,
-.invitation-page .ceremony-item,
-.invitation-page .rsvp-card,
-.invitation-page .details-card,
-.invitation-page .gift-card,
-.invitation-page .story-card {
-background: rgba(255, 253, 251, 0.96);
-border: 1px solid rgba(184, 138, 125, 0.24);
-border-radius: 20px;
-box-shadow: 0 8px 24px rgba(61, 36, 42, 0.05);
-padding: clamp(22px, 3.5vw, 36px);
+.invitation-page .card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--theme-rgb), 0.4);
 }
 
 .invitation-page .count-box {
-background: #fffdfb;
-border: 1px solid rgba(184, 138, 125, 0.28);
-border-radius: 16px;
-font-variant-numeric: tabular-nums;
-box-shadow: 0 4px 14px rgba(61, 36, 42, 0.04);
+  border-radius: 18px;
+  background: var(--theme-surface, var(--paper-soft));
+  border: 1px solid rgba(var(--theme-rgb), 0.26);
+  box-shadow: 0 8px 20px rgba(var(--theme-strong-rgb), 0.08);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  animation: modernReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease;
+  will-change: transform;
 }
 
-.invitation-page .schedule-item {
-border-left: 1px solid rgba(184, 138, 125, 0.35);
-padding-left: 20px;
-margin-bottom: 18px;
+.invitation-page .count-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--theme-rgb), 0.42);
+}
+
+.invitation-page .count-box strong {
+  color: var(--rose-dark);
+}
+
+.invitation-page .schedule-item,
+.invitation-page .ceremony-item {
+  border-radius: 16px;
+  background: var(--theme-surface-soft, var(--paper));
+  border: 1px solid rgba(var(--theme-rgb), 0.22);
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  animation: modernReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease;
+  will-change: transform;
+}
+
+.invitation-page .schedule-item:hover,
+.invitation-page .ceremony-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--theme-rgb), 0.38);
 }
 
 .invitation-page .schedule-time,
-.invitation-page .time-badge {
-font-variant-numeric: tabular-nums;
-letter-spacing: 0.06em;
-font-weight: 600;
-color: #5c3740;
-background: rgba(184, 138, 125, 0.12);
-border: 1px solid rgba(184, 138, 125, 0.25);
-border-radius: 999px;
-padding: 4px 12px;
+.invitation-page .ceremony-time {
+  background: rgba(var(--theme-soft-rgb), 0.28);
+  border: 1px solid rgba(var(--theme-rgb), 0.28);
+  color: var(--rose-deep);
 }
 
-.invitation-page .rsvp-form button[type="submit"] {
-background: #4a2931;
-color: #fffaf7;
-border: 1px solid #4a2931;
-border-radius: 14px;
-letter-spacing: 0.06em;
-font-weight: 600;
-transition: transform 0.18s ease, background-color 0.18s ease;
+/* === 6. Gallery Zoom === */
+.invitation-page .gallery img,
+.invitation-page .gallery-item img,
+.invitation-page .photo-card img {
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
-.invitation-page .rsvp-form button[type="submit"]:hover {
-background: #361d23;
-transform: translateY(-1px);
+.invitation-page .gallery img:hover,
+.invitation-page .gallery-item:hover img,
+.invitation-page .photo-card:hover img {
+  transform: scale(1.03);
 }
 
-.floating-actions,
-.admin-quick-access {
-background: rgba(255, 252, 249, 0.96) !important;
-border: 1px solid rgba(184, 138, 125, 0.28) !important;
-box-shadow: 0 6px 20px rgba(61, 36, 42, 0.08) !important;
+/* === 7. Inputs, Focus Rings & Buttons === */
+.invitation-page input,
+.invitation-page textarea,
+.invitation-page select {
+  background: var(--theme-input, var(--paper-soft));
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  border: 1px solid rgba(var(--theme-rgb), 0.28);
+  border-radius: 14px;
+  transition: border-color 0.22s ease, background-color 0.22s ease;
 }
 
+.invitation-page input::placeholder,
+.invitation-page textarea::placeholder {
+  color: var(--theme-text-muted, var(--text-soft));
+}
+
+.invitation-page input:focus,
+.invitation-page textarea:focus,
+.invitation-page select:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(var(--theme-rgb), 0.22);
+}
+
+.invitation-page .btn-primary,
+.invitation-page .rsvp-submit,
+.invitation-page button[type="submit"],
+.intro-page .btn-primary {
+  background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+  color: var(--theme-on-accent, #ffffff);
+  border: 1px solid rgba(var(--theme-strong-rgb), 0.28);
+  box-shadow: 0 8px 20px rgba(var(--theme-strong-rgb), 0.22);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+}
+
+.invitation-page .btn-primary:hover,
+.invitation-page .rsvp-submit:hover,
+.invitation-page button[type="submit"]:hover,
+.intro-page .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.invitation-page button:active,
+.invitation-page .btn:active,
+.intro-page button:active,
+.floating-actions button:active,
+.floating-actions a:active,
+.admin-btn-clean:active {
+  transform: scale(0.98);
+}
+
+/* === 8. Floating Actions & Admin Quick Access === */
 .floating-actions a,
 .floating-actions button,
 .admin-btn-clean {
-color: #3d242a;
-border-color: rgba(184, 138, 125, 0.24);
+  background: var(--theme-surface, var(--paper-soft));
+  color: var(--theme-text-main, var(--text, var(--text-main)));
+  border: 1px solid rgba(var(--theme-rgb), 0.28);
+  box-shadow: 0 8px 22px rgba(var(--theme-strong-rgb), 0.14);
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.22s ease;
 }
-/* === Global GPU Acceleration & Modern Luxury Envelope === */
-*, *::before, *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-.petal-layer span { box-shadow: none !important; }
-[class*="butterfly"], .butterfly, .floating-bounce, .float-anim { filter: none !important; animation: none !important; }
-.intro-page { background: radial-gradient(circle at 50% 25%, #fffdf9 0%, #f8f1ea 55%, #efe3d8 100%) !important; }
-.envelope-container { box-shadow: 0 20px 44px rgba(61, 36, 42, 0.1); }
-.intro-card { outline: 1px solid color-mix(in srgb, var(--rose) 28%, transparent); outline-offset: -12px; padding: clamp(28px, 5vw, 48px) clamp(22px, 4vw, 40px); background: linear-gradient(180deg, #fffdf9 0%, #fbf6f0 100%); box-shadow: 0 18px 42px rgba(61, 36, 42, 0.08); }
-.intro-small { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; color: color-mix(in srgb, var(--rose) 85%, #3d242a); margin-bottom: 12px; }
-.couple-title { font-size: clamp(1.9rem, 4.4vw, 2.85rem); line-height: 1.16; letter-spacing: 0.02em; font-weight: 500; color: #361d23; margin: 0 0 14px; }
-.envelope-front { filter: none !important; background: linear-gradient(165deg, #fbf6f0 0%, #f3e9de 55%, #eadccf 100%); border: 1px solid rgba(184, 138, 125, 0.28); box-shadow: 0 10px 24px rgba(61, 36, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7); }
-.envelope-flap { filter: none !important; background: linear-gradient(180deg, #fdf9f4 0%, #f1e5d8 100%); border-top: 1px solid rgba(255, 255, 255, 0.75); box-shadow: 0 6px 16px rgba(61, 36, 42, 0.07); }
-.envelope-seal { background: radial-gradient(circle at 32% 30%, #d4a698 0%, #b88a7d 45%, #8f6054 100%); border: 2px solid rgba(255, 250, 245, 0.75); outline: 2px solid rgba(143, 96, 84, 0.45); outline-offset: 3px; color: #fffaf7; font-weight: 600; letter-spacing: 0.08em; text-shadow: 0 1px 2px rgba(61, 36, 42, 0.35); box-shadow: 0 6px 16px rgba(61, 36, 42, 0.18), inset 0 1px 2px rgba(255, 255, 255, 0.45); transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.24s ease; }
-.envelope-seal:hover { transform: scale(1.05); box-shadow: 0 10px 22px rgba(61, 36, 42, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.55); }
-.envelope-guest-badge { background: rgba(255, 253, 249, 0.92); border: 1px solid rgba(184, 138, 125, 0.38); border-radius: 999px; padding: 6px 16px; letter-spacing: 0.06em; color: #4a2931; box-shadow: 0 3px 10px rgba(61, 36, 42, 0.06); }
+
+.floating-actions a:hover,
+.floating-actions button:hover,
+.admin-btn-clean:hover {
+  transform: translateY(-2px);
+  border-color: rgba(var(--theme-rgb), 0.45);
+}
+
+/* === 9. Accessibility === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .envelope-seal::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
