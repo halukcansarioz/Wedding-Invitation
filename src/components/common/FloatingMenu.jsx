@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 
 const FLOATING_MENU_CSS = `
   @keyframes dockButtonBounce {
@@ -130,10 +131,8 @@ export const FloatingMenu = memo(function FloatingMenu({
       <style>{FLOATING_MENU_CSS}</style>
 
       <div className="admin-panel-trigger">
-        <a
-          href="/admin"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/admin"
           className="admin-btn-clean"
           aria-label={isEn ? "Open admin panel" : "Yönetici panelini aç"}
           title={isEn ? "Admin Panel" : "Yönetici Paneli"}
@@ -152,7 +151,7 @@ export const FloatingMenu = memo(function FloatingMenu({
             <path d="M12 8v4" />
             <path d="M12 16h.01" />
           </svg>
-        </a>
+        </Link>
       </div>
 
       <div id="main-dock">
