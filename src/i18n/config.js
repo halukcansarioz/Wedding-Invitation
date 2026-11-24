@@ -33,6 +33,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'tr',
+    lng: typeof window !== 'undefined' && window.localStorage ? (window.localStorage.getItem('i18nextLng') || 'tr') : 'tr',
     debug: false,
     interpolation: {
       escapeValue: false,
