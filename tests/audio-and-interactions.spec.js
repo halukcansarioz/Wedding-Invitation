@@ -53,7 +53,7 @@ test.describe('Sesli Mesaj ve Etkileşim Testleri', () => {
     const wishesSection = page.locator('.wishes-card, section').filter({ hasText: /Anı Defteri|Guestbook|Dilek/i }).first();
     await wishesSection.scrollIntoViewIfNeeded();
 
-    const recordButton = page.locator('button', { hasText: /Sesli|Record|🎤|Kayıt/i }).first();
+    const recordButton = wishesSection.locator('button', { hasText: /Kaydet|Record/i }).first();
     await expect(recordButton).toBeVisible({ timeout: 10000 });
     await recordButton.click({ force: true });
 
