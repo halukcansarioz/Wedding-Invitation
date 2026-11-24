@@ -111,7 +111,7 @@ export const WishesSection = memo(function WishesSection({ copy, submitWish, app
 
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             {!isRecording && !audioBlob && (
-              <button type="button" onClick={startRecording} className="secondary-button" style={{ margin: 0, borderRadius: '50px', padding: '8px 24px', borderColor: '#e74c3c', color: '#e74c3c' }}>
+              <button type="button" onClick={startRecording} className="secondary-button" style={{ margin: 0, borderRadius: '50px', padding: '8px 24px', borderColor: 'var(--rose-dark, #9f4f68)', color: 'var(--rose-dark, #9f4f68)' }}>
                 🎙️ {isEn ? "Record" : "Kaydet"}
               </button>
             )}
