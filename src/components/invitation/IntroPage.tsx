@@ -45,7 +45,7 @@ export default function IntroPage({ isOpening, copy, invitation, personalGuestNa
   return (
     <section className={`intro-page ${isOpening ? "opening" : ""}`}>
       <div className="petal-layer" aria-hidden="true">
-        {Array.from({ length: 16 }).map((_, index) => (
+        {Array.from({ length: 6}).map((_, index) => (
           <span key={index}></span>
         ))}
       </div>
