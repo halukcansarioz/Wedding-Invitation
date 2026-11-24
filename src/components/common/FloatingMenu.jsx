@@ -133,7 +133,7 @@ export const FloatingMenu = memo(function FloatingMenu({
       <div className="admin-panel-trigger">
         <Link
           to="/admin"
-          className="admin-btn-clean"
+          className="admin-btn-clean" rel="noopener noreferrer"
           aria-label={isEn ? "Open admin panel" : "Yönetici panelini aç"}
           title={isEn ? "Admin Panel" : "Yönetici Paneli"}
         >
