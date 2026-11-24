@@ -35,7 +35,7 @@
 [data-theme="gold"] { --amp-color: #c69b5c; --amp-glow: rgba(198, 155, 92, 0.42); }
 [data-theme="burgundy"] { --amp-color: #9f354f; --amp-glow: rgba(159, 53, 79, 0.42); }
 [data-theme="minimal"] { --amp-color: #7c6f64; --amp-glow: rgba(124, 111, 100, 0.38); }
-[data-theme="lavanta"] { --amp-color: #8f7fb8; --amp-glow: rgba(143, 127, 184, 0.42);
+[data-theme="lavanta"] { --amp-color: #8f7fb8; --amp-glow: rgba(143, 127, 184, 0.42); }
 [data-theme="modern"] { --amp-color: #9a7450; --amp-glow: rgba(154, 116, 80, 0.38); }
 [data-theme="dark"] {
   --amp-color: #e3b6c7;
