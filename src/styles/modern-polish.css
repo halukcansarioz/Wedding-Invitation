@@ -184,3 +184,178 @@
     transform: none;
   }
 }
+
+/* Modern Luxury Visual Enhancements */
+.invitation-page .hero-date,
+.invitation-page .hero-time {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 16px -4px rgba(85, 48, 59, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Refined Glass Surface & Hover Lift for Main Cards */
+.invitation-page .card,
+.invitation-page .ceremony-item,
+.invitation-page .rsvp-card,
+.invitation-page .qr-public-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 12px 36px -8px rgba(85, 48, 59, 0.09),
+    0 4px 12px -2px rgba(85, 48, 59, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+}
+
+.invitation-page .card:hover,
+.invitation-page .ceremony-item:hover,
+.invitation-page .rsvp-card:hover,
+.invitation-page .qr-public-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 20px 44px -10px rgba(85, 48, 59, 0.13),
+    0 8px 18px -4px rgba(85, 48, 59, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Countdown Boxes: Tabular-Nums Hierarchy & Top Theme Accent */
+.invitation-page .count-box {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 8px 24px -6px rgba(85, 48, 59, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.invitation-page .count-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, var(--accent, var(--accent-soft, #b88a7d)), transparent);
+  opacity: 0.9;
+}
+
+.invitation-page .count-box:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 30px -8px rgba(85, 48, 59, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.invitation-page .count-box span,
+.invitation-page .count-box .count-num {
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Schedule Items: Time Badge, Soft Separation & Left Accent Line */
+.invitation-page .schedule-item {
+  position: relative;
+  padding: 16px 20px 16px 22px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  border-left: 3px solid var(--accent, var(--accent-soft, #b88a7d));
+  box-shadow:
+    0 6px 20px -6px rgba(85, 48, 59, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.invitation-page .schedule-item:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow:
+    0 10px 26px -6px rgba(85, 48, 59, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.invitation-page .schedule-item .schedule-time,
+.invitation-page .schedule-item strong {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  background: rgba(184, 138, 125, 0.14);
+  color: var(--text, var(--text-main, #55303b));
+  border: 1px solid rgba(184, 138, 125, 0.26);
+}
+
+/* RSVP Inputs & Action Buttons */
+.invitation-page .rsvp-card input,
+.invitation-page .rsvp-card textarea,
+.invitation-page .rsvp-card select {
+  border-radius: 14px;
+  border: 1px solid rgba(85, 48, 59, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.invitation-page .rsvp-card input:focus,
+.invitation-page .rsvp-card textarea:focus,
+.invitation-page .rsvp-card select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--accent, var(--accent-soft, #b88a7d));
+  box-shadow: 0 0 0 4px rgba(184, 138, 125, 0.18);
+}
+
+.invitation-page .rsvp-submit-btn,
+.invitation-page .map-btn,
+.invitation-page .calendar-btn,
+.invitation-page .btn-primary,
+.invitation-page .action-btn,
+.invitation-page button[type="submit"],
+.invitation-page a.map-link,
+.invitation-page a.calendar-link {
+  box-shadow: 0 6px 18px -4px rgba(85, 48, 59, 0.14);
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.25s ease;
+}
+
+.invitation-page .rsvp-submit-btn:hover,
+.invitation-page .map-btn:hover,
+.invitation-page .calendar-btn:hover,
+.invitation-page .btn-primary:hover,
+.invitation-page .action-btn:hover,
+.invitation-page button[type="submit"]:hover:not(:disabled),
+.invitation-page a.map-link:hover,
+.invitation-page a.calendar-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -6px rgba(85, 48, 59, 0.2);
+  filter: brightness(1.03);
+}
