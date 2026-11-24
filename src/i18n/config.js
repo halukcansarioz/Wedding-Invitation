@@ -35,6 +35,7 @@ i18n
     fallbackLng: 'tr',
     lng: typeof window !== 'undefined' && window.localStorage ? (window.localStorage.getItem('i18nextLng') || 'tr') : 'tr',
     debug: false,
+    detection: { order: ['localStorage'], caches: ['localStorage'] },
     interpolation: {
       escapeValue: false,
     }
